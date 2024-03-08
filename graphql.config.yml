@@ -1,0 +1,1 @@
+schema: ./src/main/kotlin/com/nimeji/wclaug/adapters/warcraftlogs/graphql/schema.json

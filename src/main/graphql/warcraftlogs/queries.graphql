@@ -1,0 +1,33 @@
+query RateLimit {
+    rateLimitData {
+        limitPerHour
+    }
+}
+
+query FightIdsFromReport($report: String!, $encounterId: Int, $fightIds: [Int]) {
+    reportData {
+        report(code: $report) {
+            fights(
+                translate: false
+                killType: Encounters
+                encounterID: $encounterId
+                fightIDs: $fightIds
+            ) {
+                id
+            }
+        }
+    }
+}
+
+query SingleReport($report: String!, $fightId: Int!, $filterExpression: String!) {
+    reportData {
+        report(code: $report) {
+            table(
+                fightIDs: [$fightId]
+                filterExpression: $filterExpression
+                dataType: DamageDone
+                translate: false
+            )
+        }
+    }
+}
