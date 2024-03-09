@@ -1,8 +1,8 @@
-package core.model
+package com.nimeji.wclaug.model
 
-import core.model.Role.*
+import com.nimeji.wclaug.model.Role.*
 
-enum class ClassSpec(val classId: Int, val specIndex: Int, val role: Role) {
+enum class ClassSpecialization(val classId: Int, val specIndex: Int, val role: Role) {
     WARRIOR_ARMS(1, 1, DPS), WARRIOR_FURY(1, 2, DPS), WARRIOR_PROTECTION(1, 3, TANK),
     PALADIN_HOLY(2, 1, HEAL), PALADIN_PROTECTION(2, 2, TANK), PALADIN_RETRIBUTION(2, 3, DPS),
     HUNTER_BEASTMASTERY(3, 1, DPS), HUNTER_MARKSMANSHIP(3, 2, DPS), HUNTER_SURVIVAL(3, 3, DPS),
@@ -19,9 +19,9 @@ enum class ClassSpec(val classId: Int, val specIndex: Int, val role: Role) {
     CUSTOM_ICON(0, 0, TANK);
 
     companion object {
-        fun fromIcon(iconName: String): ClassSpec {
+        fun fromIcon(iconName: String): ClassSpecialization {
             val parts = iconName.split("-")
-            return ClassSpec.valueOf("${parts[0].uppercase()}_${parts[1].uppercase()}")
+            return ClassSpecialization.valueOf("${parts[0].uppercase()}_${parts[1].uppercase()}")
         }
     }
 }

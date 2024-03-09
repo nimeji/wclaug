@@ -7,7 +7,7 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import com.nimeji.wclaug.adapters.warcraftlogs.graphql.FightIdsFromReportQuery
 import com.nimeji.wclaug.adapters.warcraftlogs.graphql.SingleReportQuery
 
-import core.model.Fight
+import com.nimeji.wclaug.model.Fight
 import core.adapters.dto.ReportTable
 import core.configuration.client
 import kotlinx.coroutines.runBlocking

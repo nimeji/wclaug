@@ -1,10 +1,10 @@
-package core.model
+package com.nimeji.wclaug.model
 
 class Player (
     val name: String,
-    val classSpec: ClassSpec,
+    val classSpecialization: ClassSpecialization,
 ) {
     override fun toString(): String {
-        return "$name-$classSpec}"
+        return "$name-$classSpecialization}"
     }
 }
